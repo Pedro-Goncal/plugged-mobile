@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 //Navigation
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 //Stacks
-import HomeBottomTabs from './HomeBottomTabs';
+import HomeBottomTabs from "./HomeBottomTabs";
 
 const Stack = createStackNavigator();
 
