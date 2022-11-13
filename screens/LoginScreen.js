@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   SafeAreaView,
   Image,
+  ImageBackground,
 } from 'react-native';
 
 //Styles
@@ -18,6 +19,7 @@ import FacebookButton from '../components/SocialMediaButtons/FacebookButton';
 
 //Assets
 import Logo from '../assets/logo-no-background.png';
+import loginBg from '../assets/backgrounds/login-bg.png';
 
 const colorGreen = '#096A2E';
 
@@ -27,90 +29,83 @@ const LoginScreen = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
-    <SafeAreaView style={[tw`flex-1`]}>
-      <View
-        style={[
-          tw`flex-1 flex justify-end items-center pb-10`,
-          { backgroundColor: '#111' },
-        ]}
+    <SafeAreaView className="flex-1">
+      <ImageBackground
+        source={loginBg}
+        resizeMode="cover"
+        className="flex-1 justify-center"
       >
-        <View style={[tw`p-10 flex w-full`]}>
-          <View style={[tw`w-full flex justify-center items-center mb-8`]}>
-            <Image source={Logo} style={[tw``, { width: 200, height: 100 }]} />
-          </View>
-          <View style={[tw`w-full mb-2`]}>
-            <Text style={[tw`text-xl font-bold`, { color: '#31BE89' }]}>
-              Sing In
-            </Text>
-          </View>
+        <View className="flex-1 flex justify-end items-center pb-10">
+          <View className="px-10 flex w-full">
+            <View className="w-full flex justify-center items-center">
+              <Image source={Logo} style={{ width: 200, height: 200 }} />
+            </View>
+            <View className="w-full mb-2">
+              <Text style={{ color: '#31BE89' }} className="text-xl font-bold">
+                Sing In
+              </Text>
+            </View>
 
-          <View style={tw`flex flex-row justify-center items-center`}>
-            {/* <Icon name="envelope" size={20} color={'white'} /> */}
-            <TextInput
-              style={[
-                tw`w-full text-white bg-white rounded-lg py-4 px-5`,
-                { backgroundColor: '#333', color: '#FFF' },
-              ]}
-              placeholderTextColor="#fff"
-              placeholder="Email"
-              type="email"
-              value={email}
-              onChangeText={(text) => setEmail(text)}
-            />
-          </View>
-          <View
-            style={[
-              tw` flex flex-row rounded-lg justify-center items-center mt-4`,
-              { backgroundColor: '#333' },
-            ]}
-          >
-            <TextInput
-              style={[
-                tw` w-5/6 rounded-lg py-4 px-2`,
-                { backgroundColor: '#333', color: '#FFF' },
-              ]}
-              placeholderTextColor="#fff"
-              secureTextEntry={passwordVisible}
-              placeholder="Password"
-              type="password"
-              value={password}
-              onChangeText={(text) => setPassword(text)}
-            />
-            <TouchableOpacity
-              onPress={() => setPasswordVisible(!passwordVisible)}
-            >
-              <Icon
-                name={passwordVisible ? 'eye-slash' : 'eye'}
-                size={26}
-                color={'grey'}
+            <View className="flex flex-row justify-center items-center">
+              {/* <Icon name="envelope" size={20} color={'white'} /> */}
+              <TextInput
+                style={{ backgroundColor: '#333', color: '#FFF' }}
+                className="w-full text-white bg-white rounded-lg py-4 px-5"
+                placeholderTextColor="#fff"
+                placeholder="Email"
+                type="email"
+                value={email}
+                onChangeText={(text) => setEmail(text)}
               />
+            </View>
+            <View
+              className="flex flex-row rounded-lg justify-center items-center mt-4"
+              style={{ backgroundColor: '#333' }}
+            >
+              <TextInput
+                style={{ backgroundColor: '#333', color: '#FFF' }}
+                className="w-5/6 rounded-lg py-4 px-2"
+                placeholderTextColor="#fff"
+                secureTextEntry={passwordVisible}
+                placeholder="Password"
+                type="password"
+                value={password}
+                onChangeText={(text) => setPassword(text)}
+              />
+              <TouchableOpacity
+                onPress={() => setPasswordVisible(!passwordVisible)}
+              >
+                <Icon
+                  name={passwordVisible ? 'eye-slash' : 'eye'}
+                  size={26}
+                  color={'grey'}
+                />
+              </TouchableOpacity>
+            </View>
+            <View className="flex flex-row justify-end mt-4">
+              <TouchableOpacity>
+                <Text style={[tw`text-white`]}>Recover Password</Text>
+              </TouchableOpacity>
+            </View>
+            <TouchableOpacity
+              className="mt-6 py-4 rounded-lg flex justify-center items-center"
+              style={{ backgroundColor: colorGreen }}
+            >
+              <Text className="text-white text-lg">Login</Text>
             </TouchableOpacity>
           </View>
-          <View style={[tw`flex flex-row justify-end mt-4`]}>
-            <TouchableOpacity>
-              <Text style={[tw`text-white`]}>Recover Password</Text>
-            </TouchableOpacity>
-          </View>
-          <TouchableOpacity
-            style={[
-              tw`mt-6 py-4 rounded-lg flex justify-center items-center`,
-              { backgroundColor: colorGreen },
-            ]}
-          >
-            <Text style={[tw`text-white text-lg`]}>Login</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={[tw`flex justify-center items-center`]}>
-          <View>
-            <Text style={[tw`text-white`]}>Or Sign in with</Text>
-          </View>
-          {/* Social Media Icons */}
-          <View style={[tw`mt-6`]}>
-            <GoogleButton />
-            <FacebookButton buttonViewStyle={{ borderColor: 'none' }} />
+          <View className="flex justify-center items-center">
+            <View>
+              <Text className="text-white">Or Sign in with</Text>
+            </View>
+            {/* Social Media Icons */}
+            <View className="mt-6">
+              <GoogleButton />
+              <FacebookButton buttonViewStyle={{ borderColor: 'none' }} />
+            </View>
           </View>
         </View>
-      </View>
+      </ImageBackground>
     </SafeAreaView>
   );
 };
