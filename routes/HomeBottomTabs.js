@@ -19,14 +19,14 @@ const HomeBottomTabs = () => {
         }}
       />
       <Tab.Screen
-        name="Login"
-        component={LoginScreen}
-        options={{ headerShown: false }}
-      />
-      <Tab.Screen
         name="Settings"
         component={SettingsScreen}
         options={{ headerShown: false, unmountOnBlur: true }}
+      />
+      <Tab.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{ headerShown: false }}
       />
     </Tab.Navigator>
   );
