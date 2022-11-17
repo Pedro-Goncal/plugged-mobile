@@ -13,12 +13,10 @@ const styles = StyleSheet.create({
     width: 220,
     borderRadius: 5,
     margin: 5,
-    position: 'relative',
-    marginBottom: 0,
   },
   imageIconStyle: {
     padding: 10,
-    marginLeft: 15,
+    // marginLeft: 15,
     height: 25,
     width: 25,
     resizeMode: 'stretch',
@@ -47,8 +45,9 @@ const FacebookButton = ({
         source={require('./images/facebook.png')}
         style={{ ...styles.imageIconStyle, ...logoStyle }}
       />
+
       <Text style={{ ...styles.textStyle, ...textStyle }}>
-        {buttonText ? buttonText : 'Sign in with Facebook'}
+        {buttonText ? buttonText : 'Facebook'}
       </Text>
     </TouchableOpacity>
   );

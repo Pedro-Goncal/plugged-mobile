@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
   imageIconStyle: {
     padding: 10,
-    marginLeft: 15,
+    // marginLeft: 15,
     height: 25,
     width: 25,
     resizeMode: 'stretch',
@@ -44,8 +44,9 @@ const GoogleButton = ({
         source={require('./images/google.png')}
         style={{ ...styles.imageIconStyle, ...logoStyle }}
       />
+
       <Text style={{ ...styles.textStyle, ...textStyle }}>
-        {buttonText ? buttonText : 'Sign in with Google'}
+        {buttonText ? buttonText : 'Sign up with Google'}
       </Text>
     </TouchableOpacity>
   );
