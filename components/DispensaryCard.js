@@ -6,31 +6,53 @@ import tw from "tailwind-react-native-classnames";
 
 // Icons
 import { StarIcon } from "react-native-heroicons/solid";
+import { HeartIcon } from "react-native-heroicons/solid";
+
 import { Ionicons } from "@expo/vector-icons";
 
 const DispensaryCard = () => {
   return (
-    <TouchableOpacity style={tw`pt-5 pl-5 bg-white mr-3 shadow`}>
+    <TouchableOpacity style={tw`rounded-xl mr-5`}>
       <Image
-        source={{
-          uri: "https://www.google.com/maps/uv?pb=!1s0x872b41c6ce811e73%3A0xbec99423dcdbbbc0!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipM0d2nzI90XTZvHnyxXfrUBJv86I9A9IVa7GIGL%3Dw130-h87-n-k-no!5sdispensaries%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipM0d2nzI90XTZvHnyxXfrUBJv86I9A9IVa7GIGL&hl=en&sa=X&ved=2ahUKEwjEuY_OpqL7AhXVLEQIHdQ6A-4Q7ZgBKAF6BAgJEAM#",
-        }}
-        style={tw`h-36 w-64 rounded-sm`}
+        source={require("../assets/backgrounds/dispensary-bg.png")}
+        style={tw`rounded-sm`}
       />
-      <View style={tw`px-3 pb-4`}>
-        <Text style={tw`text-green-500 font-bold text-lg pt-2`}>
-          Ponderosa Dispensary
-        </Text>
-        <View style={tw`flex-row items-center pl-1`}>
-          <StarIcon color="green" opacity={0.5} size={22} />
-          <Text style={tw`text-green-500 text-xs pl-2`}>4.5</Text>
-        </View>
-        <View style={tw`flex-row items-center pl-1 pt-1`}>
-          {/* <LocationMarkerIcon color="gray" opacity={0.4} size={22} /> */}
-          <Ionicons name="location-outline" size={22} color="gray" />
-          <Text style={tw`text-xs text-gray-500`}>
-            Nearby - 9240 W Northern Ave #103B
+      <View className="absolute pt-5 pl-3">
+        <Image
+          className="border-2 border-white rounded-lg"
+          source={require("../assets/icons/dispensaryIcon.png")}
+        />
+      </View>
+      <View className="absolute mt-52 ml-2 mr-1 rounded-lg border-2 border-white pb-4 bg-black">
+        <View className="flex flex-row items-center pt-2 pr-2">
+          <Text style={tw`text-green-500 font-bold text-lg pl-2 pr-2`}>
+            Plugged Dispensary
           </Text>
+          <Text className="">
+            <HeartIcon className="" color="white" size={22} />
+          </Text>
+        </View>
+
+        <Text style={tw`text-xs text-white pl-2 pr-2`}>
+          Address - Fake Boulevard #69, Phoenix, AZ 85029
+        </Text>
+        <Text className="text-white text-xs pl-2">Phone: 420-420-6969</Text>
+        <View className="flex flex-row items-center">
+          <Text className="text-[#DC8758] text-xs pl-2">Closed</Text>
+          <Text className="text-white text-xs pl-2">
+            Opens 9am - 9pm, Mon-Sat
+          </Text>
+        </View>
+
+        <View style={tw`flex-row items-center pl-1 pt-1`}>
+          <Text style={tw`text-green-500 text-xs pl-1`}>4</Text>
+          <View className="pl-1 flex flex-row">
+            <StarIcon className="" color="#DC8758" size={16} />
+            <StarIcon className="" color="#DC8758" size={16} />
+            <StarIcon className="" color="#DC8758" size={16} />
+            <StarIcon className="" color="#DC8758" size={16} />
+            <StarIcon className="" color="white" size={16} />
+          </View>
         </View>
       </View>
     </TouchableOpacity>

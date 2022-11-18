@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -10,7 +10,7 @@ import {
   Dimensions,
   StyleSheet,
   Pressable,
-} from 'react-native';
+} from "react-native";
 
 //Reanimated
 import Animated, {
@@ -20,29 +20,29 @@ import Animated, {
   withTiming,
   withDelay,
   runOnJS,
-} from 'react-native-reanimated';
+} from "react-native-reanimated";
 
 //Styles
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Svg, { Image as ImageSvg, Ellipse, ClipPath } from 'react-native-svg';
+import Icon from "react-native-vector-icons/FontAwesome";
+import Svg, { Image as ImageSvg, Ellipse, ClipPath } from "react-native-svg";
 
 //Components
-import GoogleButton from '../components/SocialMediaButtons/GoogleButton';
-import FacebookButton from '../components/SocialMediaButtons/FacebookButton';
+import GoogleButton from "../components/SocialMediaButtons/GoogleButton";
+import FacebookButton from "../components/SocialMediaButtons/FacebookButton";
 
 //Assets
-import Logo from '../assets/logo-no-background.png';
-import loginBg from '../assets/backgrounds/login-bg.png';
+import Logo from "../assets/logo-no-background.png";
+import loginBg from "../assets/backgrounds/login-bg.png";
 
-const colorGreen = '#169F80';
-const colorGreenLight = '#008489';
-const colorGreenLight2 = '#8acfbf';
+const colorGreen = "#169F80";
+const colorGreenLight = "#008489";
+const colorGreenLight2 = "#8acfbf";
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get("window");
 
 const LoginScreen = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [isRegistering, setIsRegistering] = useState(false);
 
@@ -89,7 +89,7 @@ const LoginScreen = () => {
         duration: 800,
       }),
       transform: [
-        { rotate: withTiming(interpolation + 'deg', { duration: 1000 }) },
+        { rotate: withTiming(interpolation + "deg", { duration: 1000 }) },
       ],
     };
   });
@@ -122,7 +122,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <Animated.View
+    <View
       className="flex-1 justify-end "
       style={{ backgroundColor: colorGreen }}
     >
@@ -154,7 +154,7 @@ const LoginScreen = () => {
             closeButtonAnimatedStyle,
           ]}
         >
-          <Icon name="times" size={18} color={'white'} onPress={closeHandler} />
+          <Icon name="times" size={18} color={"white"} onPress={closeHandler} />
         </Animated.View>
       </Animated.View>
       <View className="flex justify-center" style={styles.bottomContainer}>
@@ -190,14 +190,14 @@ const LoginScreen = () => {
         <Animated.View style={[formAnimatedStyle, styles.formContainer]}>
           <View>
             <Text className="text-4xl font-bold mb-4">
-              {isRegistering ? 'Sign Up' : 'Login'}
+              {isRegistering ? "Sign Up" : "Login"}
             </Text>
           </View>
           <View className="flex flex-row justify-center items-center">
             <TextInput
               style={{
-                backgroundColor: '#333',
-                color: '#FFF',
+                backgroundColor: "#333",
+                color: "#FFF",
                 zIndex: 1,
               }}
               className="w-full text-white bg-white rounded-lg py-3 px-5"
@@ -210,10 +210,10 @@ const LoginScreen = () => {
           </View>
           <View
             className="flex flex-row rounded-lg justify-center items-center mt-4"
-            style={{ backgroundColor: '#333' }}
+            style={{ backgroundColor: "#333" }}
           >
             <TextInput
-              style={{ backgroundColor: '#333', color: '#FFF' }}
+              style={{ backgroundColor: "#333", color: "#FFF" }}
               className="w-5/6 rounded-lg py-3 px-2"
               placeholderTextColor="#fff"
               secureTextEntry={passwordVisible}
@@ -226,9 +226,9 @@ const LoginScreen = () => {
               onPress={() => setPasswordVisible(!passwordVisible)}
             >
               <Icon
-                name={passwordVisible ? 'eye-slash' : 'eye'}
+                name={passwordVisible ? "eye-slash" : "eye"}
                 size={26}
-                color={'grey'}
+                color={"grey"}
               />
             </TouchableOpacity>
           </View>
@@ -243,15 +243,15 @@ const LoginScreen = () => {
           )}
           <TouchableOpacity
             className=" mt-4 py-4 rounded-xl flex justify-center items-center"
-            style={[{ backgroundColor: 'black' }]}
+            style={[{ backgroundColor: "black" }]}
           >
             <Text className="text-lg" style={{ color: colorGreen }}>
-              {isRegistering ? 'Continue' : 'Login'}
+              {isRegistering ? "Continue" : "Login"}
             </Text>
           </TouchableOpacity>
           <View>
             <Text className="text-center py-1">
-              {isRegistering ? 'or Sign Up with' : 'or Login with'}
+              {isRegistering ? "or Sign Up with" : "or Login with"}
             </Text>
           </View>
           <View className="mt-1 flex flex-row justify-center items-center">
@@ -260,13 +260,13 @@ const LoginScreen = () => {
               buttonText="Google"
             />
             <FacebookButton
-              buttonViewStyle={{ borderColor: '#485a96', width: 145 }}
+              buttonViewStyle={{ borderColor: "#485a96", width: 145 }}
               buttonText="Facebook"
             />
           </View>
         </Animated.View>
       </View>
-    </Animated.View>
+    </View>
   );
 };
 
@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
   formContainer: {
     ...StyleSheet.absoluteFill,
     zIndex: -1,
-    justifyContent: 'center',
+    justifyContent: "center",
     paddingHorizontal: 20,
   },
 });

@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import HomeScreen from '../screens/HomeScreen';
-import SettingsScreen from '../screens/SettingsScreen';
-import LoginScreen from '../screens/LoginScreen';
-import StrainsScreen from '../screens/StrainsScreen';
+import HomeScreen from "../screens/HomeScreen";
+import LoginScreen from "../screens/LoginScreen";
+import StrainsScreen from "../screens/StrainsScreen";
 
 // Icons (Expo)
-import { Entypo } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Entypo } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 
 // React Native
-import { Text } from 'react-native';
+import ProfileScreen from "../screens/ProfileScreen";
+import SearchScreen from "../screens/SearchScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,59 +22,77 @@ const HomeBottomTabs = () => {
     <Tab.Navigator
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: '#222222',
+          backgroundColor: "#222222",
         },
       }}
     >
+      <Tab.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{ headerShown: false }}
+      />
       <Tab.Screen
         name="Home"
         component={HomeScreen}
         options={{
           headerShown: false,
-          tabBarActiveTintColor: 'green',
+          tabBarActiveTintColor: "green",
 
           tabBarIcon: ({ focused }) => (
             <Entypo
               name="home"
               size={34}
-              color={focused ? 'green' : '#7A7A7A'}
+              color={focused ? "green" : "#7A7A7A"}
             />
           ),
         }}
       />
-      <Tab.Screen
-        name="Profile"
-        component={LoginScreen}
-        options={{ headerShown: false }}
-      />
+
       <Tab.Screen
         name="Strains"
         component={StrainsScreen}
         options={{
           headerShown: false,
-          tabBarActiveTintColor: 'green',
+          tabBarActiveTintColor: "green",
 
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name="cannabis"
               size={34}
-              color={focused ? 'green' : '#7A7A7A'}
+              color={focused ? "green" : "#7A7A7A"}
             />
           ),
         }}
       />
       <Tab.Screen
-        name="Settings"
-        component={SettingsScreen}
+        name="Search"
+        component={SearchScreen}
         options={{
           headerShown: false,
-          tabBarActiveTintColor: 'green',
+          tabBarActiveTintColor: "green",
 
           tabBarIcon: ({ focused }) => (
-            <Ionicons
-              name="settings"
+            <FontAwesome
+              name="search"
               size={34}
-              color={focused ? 'green' : '#7A7A7A'}
+              color={focused ? "green" : "#7A7A7A"}
+            />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: "green",
+
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons
+              name="account"
+              size={24}
+              color={focused ? "green" : "#7A7A7A"}
             />
           ),
         }}
