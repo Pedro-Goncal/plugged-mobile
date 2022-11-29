@@ -10,9 +10,16 @@ import { HeartIcon } from "react-native-heroicons/solid";
 
 import { Ionicons } from "@expo/vector-icons";
 
+import { useNavigation } from "@react-navigation/native";
+
 const DispensaryCard = () => {
+
+  const navigation = useNavigation()
+ 
   return (
-    <TouchableOpacity style={tw`rounded-xl mr-5`}>
+    <TouchableOpacity style={tw`rounded-xl mr-5`} onPress={()=> {
+      navigation.navigate("DispensaryScreen")
+    }}>
       <Image
         source={require("../assets/backgrounds/dispensary-bg.png")}
         style={tw`rounded-sm`}

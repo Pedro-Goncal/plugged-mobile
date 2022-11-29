@@ -5,9 +5,13 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 //Stacks
-import HomeBottomTabs from "./HomeBottomTabs";
+import BottomTabs from "./BottomTabs/BottomTabs";
 
 const Stack = createStackNavigator();
+
+/**
+ To add stacks inside the Home Bottom tabs 
+ */
 
 const Routes = () => {
   return (
@@ -15,11 +19,12 @@ const Routes = () => {
       <Stack.Navigator>
         <Stack.Screen
           name="HomeScreen"
-          component={HomeBottomTabs}
+          component={BottomTabs}
           options={{
             headerShown: false,
           }}
         />
+     
       </Stack.Navigator>
     </NavigationContainer>
   );
