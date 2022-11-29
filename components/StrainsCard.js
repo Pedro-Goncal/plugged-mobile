@@ -3,11 +3,17 @@ import React from "react";
 
 import tw from "tailwind-react-native-classnames";
 import { StarIcon } from "react-native-heroicons/solid";
+import { useNavigation } from "@react-navigation/native";
 
 const StrainsCard = () => {
+  const navigation = useNavigation();
+  const navi = () => {
+    navigation.navigate("StrainsScreen");
+    console.log("Yo, what up?!?");
+  };
   return (
     <View className="pt-5">
-      <TouchableOpacity className="flex flew-row items-center">
+      <TouchableOpacity className="flex flew-row items-center" onPress={navi}>
         <Image
           source={require("../assets/backgrounds/highlightStrain.png")}
           className="rounded-lg"

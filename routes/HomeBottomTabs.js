@@ -52,8 +52,14 @@ const HomeBottomTabs = () => {
         name="Strains"
         component={StrainsScreen}
         options={{
-          headerShown: false,
           tabBarActiveTintColor: "green",
+          title: "Purple Haze",
+          headerStyle: {
+            backgroundColor: "black",
+          },
+          headerTitleStyle: {
+            color: "white",
+          },
 
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
