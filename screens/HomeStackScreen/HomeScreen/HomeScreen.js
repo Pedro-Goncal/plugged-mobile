@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   View,
@@ -21,6 +22,8 @@ import StrainsCard from "../../../components/StrainsCard";
 // Assets
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={tw`flex-1 flex bg-black`}>
       <ScrollView className="bg-black">
@@ -35,9 +38,6 @@ const HomeScreen = () => {
 
           <ScrollView className="pt-8 pl-6" horizontal>
             <DispensaryCard />
-            <DispensaryCard />
-            <DispensaryCard />
-            <DispensaryCard />
           </ScrollView>
         </View>
 
@@ -45,6 +45,7 @@ const HomeScreen = () => {
           <Text style={tw`text-white text-2xl pt-10 font-bold pl-5`}>
             Strain of the Month
           </Text>
+
           <View>
             <StrainsCard />
           </View>

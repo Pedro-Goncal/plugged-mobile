@@ -7,6 +7,10 @@ import FilterOptionsCard from "../../../components/FilterOptionsCard";
 
 const { width, height } = Dimensions.get("window");
 
+/*
+ TODO -  Conditionaly render icons based on dispensary
+ */
+
 const DispensaryScreen = () => {
   return (
     <View style={styles.container}>
