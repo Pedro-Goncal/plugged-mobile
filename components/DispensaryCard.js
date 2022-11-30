@@ -15,6 +15,12 @@ import tw from "tailwind-react-native-classnames";
 import { StarIcon } from "react-native-heroicons/solid";
 import { HeartIcon } from "react-native-heroicons/solid";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+
+//Redux
+import { useDispatch } from "react-redux";
+import { selectDispensery } from "../redux/slices/dispenseriesSlice";
+
 const Item = ({ name }) => (
   <View className="">
     <Text className="text-white">{name}</Text>
@@ -29,6 +35,9 @@ const DispensaryCard = ({
   imgUrl,
   logoUrl,
 }) => {
+  const navigation = useNavigation();
+  const dispatch = useDispatch();
+
   return (
     <FlashList
       data={dispensaries}
@@ -38,7 +47,13 @@ const DispensaryCard = ({
       estimatedItemSize={5}
       renderItem={({ item }) => (
         <View style={tw`px-3`}>
-          <TouchableOpacity className="mx-3">
+          <TouchableOpacity
+            className="mx-3"
+            onPress={() => {
+              dispatch(selectDispensery(item));
+              navigation.navigate("DispensaryScreen");
+            }}
+          >
             <Image
               source={{ uri: item.imgUrl }}
               className="object-contain rounded-xl h-96 w-80"

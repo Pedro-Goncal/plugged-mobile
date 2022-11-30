@@ -7,6 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const StrainsCard = () => {
   const navigation = useNavigation();
+
   const navi = () => {
     navigation.navigate("StrainsScreen");
     console.log("Yo, what up?!?");

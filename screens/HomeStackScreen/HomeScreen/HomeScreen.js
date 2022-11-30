@@ -24,6 +24,8 @@ import StrainsCard from "../../../components/StrainsCard";
 const HomeScreen = () => {
   const navigation = useNavigation();
 
+  // TODO - MIKE - Se note on Dispensery card
+
   return (
     <SafeAreaView style={tw`flex-1 flex bg-black`}>
       <ScrollView className="bg-black">
@@ -37,6 +39,7 @@ const HomeScreen = () => {
           <FilterOptionsCard />
 
           <ScrollView className="pt-8 pl-6" horizontal>
+            {/* We should have the flash list here and the dispensery card be each own card indevidual */}
             <DispensaryCard />
           </ScrollView>
         </View>

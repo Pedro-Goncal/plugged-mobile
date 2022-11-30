@@ -1,17 +1,14 @@
 export const dispensaries = [
-  // {
-  //   id: 1,
-  //   name: "Plugged Dispensary",
-  //   address: "Fake Boulevard #69, Phoenix, AZ 85029",
-  //   phone: "420-420-6969",
-  //   hours: "9AM - 9PM",
-  //   days: "Sun-Sat",
-  //   imgUrl: "../assets/backgrounds/dispensary-bg.png",
-  //   logoUrl: "../assets/icons/dispensaryIcon.png",
-  // },
   {
     id: 2,
-    name: "tru|med Dispensary",
+    name: "tru|med",
+    delivers: true,
+    driveThru: false,
+    twentyFour: false,
+    rating: 5,
+    phone: "555-555-5555",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     address: "1613 N. 40th St. Phoenix, AZ 85008",
     phone: "602-275-1279",
     hours: "7AM - 10PM",
@@ -24,6 +21,13 @@ export const dispensaries = [
   {
     id: 3,
     name: "Harvest House of Cannabis",
+    delivers: true,
+    driveThru: true,
+    twentyFour: false,
+    rating: 4,
+    phone: "555-555-5555",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     address: "3828 S Vermeersch Rd Avondale, AZ 85323",
     phone: "623-792-5032",
     hours: "9AM - 8PM",
@@ -34,7 +38,14 @@ export const dispensaries = [
   },
   {
     id: 4,
-    name: "Ponderosa Dispensary",
+    name: "Ponderosa",
+    delivers: false,
+    driveThru: false,
+    twentyFour: true,
+    rating: 3,
+    phone: "555-555-5555",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     address: "9240 W Northern Ave #103B Glendale, AZ 85305",
     phone: "623-877-3934",
     hours: "8AM - 9PM",
@@ -47,6 +58,13 @@ export const dispensaries = [
   {
     id: 5,
     name: "Sol Flower",
+    delivers: true,
+    driveThru: true,
+    twentyFour: false,
+    rating: 4,
+    phone: "555-555-5555",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     address: "22041 N 23rd Ave. Phoenix, AZ 85027",
     phone: "602-390-1044",
     hours: "9AM - 8PM",
@@ -61,6 +79,13 @@ export const dispensaries = [
   {
     id: 6,
     name: "The Mint Cannabis",
+    delivers: false,
+    driveThru: true,
+    twentyFour: true,
+    rating: 4,
+    phone: "555-555-5555",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     address: "17036 N Cave Creek Rd Phoenix, AZ 85032",
     phone: "480-PHX-MINT",
     hours: "8AM - 10PM",
@@ -69,5 +94,14 @@ export const dispensaries = [
       "https://mintdeals.com/wp-content/uploads/2022/07/phoenix-building-v2-600x600-1.jpg",
     logoUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKsRevnIkvoxElUFtUgIgNVBWeGZwHi6ByyA&usqp=CAU",
+  },
+];
+
+export const exampleProducts = [
+  {
+    id: 1,
+    name: "Bong",
+    price: "28.52",
+    description: "Lorem ",
   },
 ];

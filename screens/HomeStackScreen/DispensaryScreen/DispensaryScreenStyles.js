@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   dispensaryImageContainer: {
-    marginVertical: 10,
     borderTopWidth: 3,
     borderBottomWidth: 3,
     borderColor: "#fff",
@@ -21,44 +20,94 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
   mainContainer: {
-    padding: 20,
+    paddingHorizontal: 15,
+    paddingVertical: 30,
     width,
   },
-  logoIconsContainer: {
+  topContainer: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    width: "100%",
+    width: width,
   },
   logoContainer: {
-    borderWidth: 2,
-    borderColor: colors.white,
-    borderRadius: 8,
-    width: 125,
+    width: "37%",
   },
   logo: {
     width: 120,
     height: 120,
     resizeMode: "cover",
+    borderRadius: 8,
+    overflow: "hidden",
+    borderWidth: 2,
+    borderColor: colors.white,
+    borderRadius: 8,
+  },
+  nameIconContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "60%",
+  },
+  name: {
+    color: colors.orange,
+    fontSize: 25,
+    fontWeight: "bold",
   },
   iconsContainer: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
-    marginRight: 10,
+    justifyContent: "flex-start",
+    alignItems: "flex-end",
   },
   icon: {
     width: 45,
     height: 45,
-    marginHorizontal: 8,
+    marginHorizontal: 4,
   },
   descriptionContainer: {
-    height: 500,
-    paddingTop: 15,
+    marginTop: 15,
   },
   description: {
     color: "#FFF",
-    Text: "justify",
+    text: "justify",
+  },
+  infoContainer: {
+    marginTop: 20,
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+  },
+  mapContainer: {
+    width: "35%",
+  },
+  map: {
+    width: 120,
+    height: 120,
+    resizeMode: "cover",
+    borderRadius: 8,
+    overflow: "hidden",
+    borderWidth: 2,
+    borderColor: colors.white,
+    borderRadius: 8,
+  },
+  infoTextContainer: {
+    width: "65%",
+    paddingLeft: 5,
+  },
+  infoSmallContainer: {
+    marginBottom: 5,
+  },
+  ratingText: { color: colors.orange },
+  textWhite: { fontSize: 12, color: colors.white },
+  textOrange: { fontSize: 12, color: colors.orange },
+  textGreen: { fontSize: 12, color: colors.green },
+  productsContainer: {
+    marginTop: 20,
+  },
+  productHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
 });
 

@@ -5,7 +5,7 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import { HeartIcon, StarIcon } from "react-native-heroicons/solid";
 
 // Components
-import SimilarStrains from "../screens/SimilarStrains";
+import SimilarStrains from "../../SimilarStrains";
 
 const StrainsScreen = () => {
   return (
