@@ -23,22 +23,25 @@ import Animated, {
 } from "react-native-reanimated";
 
 //Styles
+import styles from "./LoginScreenStyles";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Svg, { Image as ImageSvg, Ellipse, ClipPath } from "react-native-svg";
 
 //Components
-import GoogleButton from "../components/SocialMediaButtons/GoogleButton";
-import FacebookButton from "../components/SocialMediaButtons/FacebookButton";
+import GoogleButton from "../../../components/SocialMediaButtons/GoogleButton";
+import FacebookButton from "../../../components/SocialMediaButtons/FacebookButton";
 
 //Assets
-import Logo from "../assets/logo-no-background.png";
-import loginBg from "../assets/backgrounds/login-bg.png";
+import Logo from "../../../assets/logo-no-background.png";
+import loginBg from "../../../assets/backgrounds/login-bg.png";
 
-const colorGreen = "#169F80";
-const colorGreenLight = "#008489";
-const colorGreenLight2 = "#8acfbf";
+const green = "#169F80";
+const lightGreen = "#008489";
+const lightGreen2 = "#8acfbf";
 
 const { width, height } = Dimensions.get("window");
+
+//TODO - (PEDRO) - Finish refactoring styles back to StylesSheet 
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -122,9 +125,9 @@ const LoginScreen = () => {
   };
 
   return (
-    <View
-      className="flex-1 justify-end "
-      style={{ backgroundColor: colorGreen }}
+    <SafeAreaView
+     
+      style={styles.container}
     >
       <Animated.View style={[StyleSheet.absoluteFill, imageAnimatedStyle]}>
         <Svg height={height} width={width}>
@@ -150,7 +153,7 @@ const LoginScreen = () => {
         <Animated.View
           className="h-8 w-8 justify-center self-center items-center rounded-full flex  "
           style={[
-            { backgroundColor: colorGreenLight, top: -15 },
+            { backgroundColor: lightGreen, top: -15 },
             closeButtonAnimatedStyle,
           ]}
         >
@@ -169,7 +172,7 @@ const LoginScreen = () => {
         <Animated.View style={buttonsAnimatedStyle}>
           <Pressable
             className="mx-6 my-2 py-4 rounded-lg flex justify-center items-center"
-            style={{ backgroundColor: colorGreen }}
+            style={{ backgroundColor: green }}
             onPress={loginHandler}
           >
             <Text className="text-white text-lg">Login</Text>
@@ -178,7 +181,7 @@ const LoginScreen = () => {
         <Animated.View style={buttonsAnimatedStyle}>
           <Pressable
             className="mx-6 my-2 py-4 rounded-lg flex justify-center items-center bg-black"
-            style={{ borderColor: colorGreen, borderWidth: 1 }}
+            style={{ borderColor: green, borderWidth: 1 }}
             onPress={registerHandler}
           >
             <Text className="text-white text-lg">Sign up</Text>
@@ -245,7 +248,7 @@ const LoginScreen = () => {
             className=" mt-4 py-4 rounded-xl flex justify-center items-center"
             style={[{ backgroundColor: "black" }]}
           >
-            <Text className="text-lg" style={{ color: colorGreen }}>
+            <Text className="text-lg" style={{ color: green }}>
               {isRegistering ? "Continue" : "Login"}
             </Text>
           </TouchableOpacity>
@@ -266,20 +269,10 @@ const LoginScreen = () => {
           </View>
         </Animated.View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
 export default LoginScreen;
 
-const styles = StyleSheet.create({
-  bottomContainer: {
-    height: height / 1.7,
-  },
-  formContainer: {
-    ...StyleSheet.absoluteFill,
-    zIndex: -1,
-    justifyContent: "center",
-    paddingHorizontal: 20,
-  },
-});
+

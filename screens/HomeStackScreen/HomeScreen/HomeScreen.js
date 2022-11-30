@@ -10,14 +10,14 @@ import {
 } from "react-native";
 
 import tw from "tailwind-react-native-classnames";
-import CannabisLearningVideosCard from "../components/CannabisLearningVideosCard";
-import CannibasLearningCard from "../components/CannibasLearningCard";
-import DeliveryNearbyCard from "../components/DeliveryNearbyCard";
-import DispensaryCard from "../components/DispensaryCard";
-import FilterOptionsCard from "../components/FilterOptionsCard";
-import HighlightsCard from "../components/HighlightsCard";
-import LocalNewsEventsCard from "../components/LocalNewsEventsCard";
-import StrainsCard from "../components/StrainsCard";
+import CannabisLearningVideosCard from "../../../components/CannabisLearningVideosCard";
+import CannibasLearningCard from "../../../components/CannibasLearningCard";
+import DeliveryNearbyCard from "../../../components/DeliveryNearbyCard";
+import DispensaryCard from "../../../components/DispensaryCard";
+import FilterOptionsCard from "../../../components/FilterOptionsCard";
+import HighlightsCard from "../../../components/HighlightsCard";
+import LocalNewsEventsCard from "../../../components/LocalNewsEventsCard";
+import StrainsCard from "../../../components/StrainsCard";
 
 // Assets
 

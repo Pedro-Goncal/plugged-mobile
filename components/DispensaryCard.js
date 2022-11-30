@@ -7,26 +7,19 @@ import {
   FlatList,
 } from "react-native";
 import React from "react";
-
 import { FlashList } from "@shopify/flash-list";
-
 import { dispensaries } from "../utils/utilObjects";
-
 // Tailwind
 import tw from "tailwind-react-native-classnames";
-
 // Icons
 import { StarIcon } from "react-native-heroicons/solid";
 import { HeartIcon } from "react-native-heroicons/solid";
-
 import { Ionicons } from "@expo/vector-icons";
-
 const Item = ({ name }) => (
   <View className="">
     <Text className="text-white">{name}</Text>
   </View>
 );
-
 const DispensaryCard = ({
   name,
   address,
@@ -65,7 +58,6 @@ const DispensaryCard = ({
                   <HeartIcon className="" color="white" size={22} />
                 </Text>
               </View>
-
               <Text style={tw`text-xs text-white pl-2 pr-2`}>
                 Address - {item.address}
               </Text>
@@ -78,7 +70,6 @@ const DispensaryCard = ({
                   Opens {item.hours}, {item.days}
                 </Text>
               </View>
-
               <View style={tw`flex-row items-center pl-1 pt-1`}>
                 <Text style={tw`text-green-500 text-xs pl-1`}>4</Text>
                 <View className="pl-1 flex flex-row">
@@ -96,5 +87,4 @@ const DispensaryCard = ({
     />
   );
 };
-
 export default DispensaryCard;
