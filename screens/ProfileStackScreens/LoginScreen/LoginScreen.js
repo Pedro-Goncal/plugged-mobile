@@ -128,9 +128,9 @@ const LoginScreen = () => {
     <Animated.View style={styles.container}>
       <Animated.View style={[StyleSheet.absoluteFill, imageAnimatedStyle]}>
         <Svg height={height} width={width}>
-          {/* <ClipPath id="clipPathId">
+          <ClipPath id="clipPathId">
             <Ellipse cx={width / 2} rx={height} ry={height} />
-          </ClipPath> */}
+          </ClipPath>
           <View style={styles.logoContainer}>
             <Image source={Logo} style={styles.logo} />
           </View>
@@ -140,7 +140,7 @@ const LoginScreen = () => {
             width={width + 100}
             height={height + 100}
             preserveAspectRatio="xMidYMid slice"
-            // clipPath="url(#clipPathId)"
+            clipPath="url(#clipPathId)"
           />
         </Svg>
         <Animated.View
