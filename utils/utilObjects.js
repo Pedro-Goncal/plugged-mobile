@@ -5,7 +5,7 @@ export const dispensaries = [
     delivers: true,
     driveThru: false,
     twentyFour: false,
-    rating: 5,
+    rating: 4,
     phone: "555-555-5555",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
@@ -24,7 +24,7 @@ export const dispensaries = [
     delivers: true,
     driveThru: true,
     twentyFour: false,
-    rating: 4,
+    rating: 5,
     phone: "555-555-5555",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
@@ -61,7 +61,7 @@ export const dispensaries = [
     delivers: true,
     driveThru: true,
     twentyFour: false,
-    rating: 4,
+    rating: 3,
     phone: "555-555-5555",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
@@ -82,7 +82,7 @@ export const dispensaries = [
     delivers: false,
     driveThru: true,
     twentyFour: true,
-    rating: 4,
+    rating: 2,
     phone: "555-555-5555",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
@@ -100,8 +100,38 @@ export const dispensaries = [
 export const exampleProducts = [
   {
     id: 1,
-    name: "Bong",
-    price: "28.52",
-    description: "Lorem ",
+    name: "Beaker Ice Bong - Black",
+    price: "45.49",
+    description:
+      "This 10-inch tall Glasscity Beaker Ice Bong is one of Grasscity's line of high-quality, affordable bongs. It's made of thick and durable borosilicate glass and it's perfect for travel.",
+    imgUrl:
+      "https://cdn.shopify.com/s/files/1/0350/8253/products/Black_Clear2_360x.jpg?v=1630694180",
+  },
+  {
+    id: 2,
+    name: "Cheef Botanicals Northern Lights Premium CBD Flower",
+    price: "15.84",
+    description:
+      "The Northern Lights CBD flower is a part of Cheef Botanical premium series. This strain has a legendary status in cannabis culture, and it's now available as a CBD dominant Indica strain.  ",
+    imgUrl:
+      "https://cdn.shopify.com/s/files/1/0350/8253/products/IMG_0841_360x.jpg?v=1614363697",
+  },
+  {
+    id: 3,
+    name: "Pulsar Gravity Recycler Water Pipe",
+    price: "122.99",
+    description:
+      "Pulsar is known for setting new standards, and it's no wonder when the brand continues to out-do itself with awesome designs. The 13-inch tall Pulsar Gravity Recycler Water Pipe will ensure your future smoking sessions will always leave a smile on your face. ",
+    imgUrl:
+      "https://cdn.shopify.com/s/files/1/0350/8253/products/Pulsar-Gravity-Recycler-Waterpipe-13-Female_media-5_a4eb576f-5d26-4e0c-9baf-7818fbfadf2d_360x.jpg?v=1612192919",
+  },
+  {
+    id: 4,
+    name: "King Palm Pre-Roll Wraps - King XL - 8 Pack",
+    price: "122.99",
+    description:
+      "The King Palm Pre-Roll Wraps are something special. They’re made from the flowering tree of the Cordia (Borage) Family that originates from Singapore rain forests.  ",
+    imgUrl:
+      "https://cdn.shopify.com/s/files/1/0350/8253/products/King-Palms-Pre-Roll-Wraps-25PK-King-XL-8pc_media-2_cbfb84b0-97e4-4f18-bf8a-43ce142f05aa_360x.jpg?v=1592597217",
   },
 ];

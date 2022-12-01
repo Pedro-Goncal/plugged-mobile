@@ -21,6 +21,8 @@ import StarRatings from "../../../components/StarRatings/StarRatings";
 import { TouchableHighlight } from "react-native-gesture-handler";
 
 import { FlashList } from "@shopify/flash-list";
+import { exampleProducts } from "../../../utils/utilObjects";
+import ProductCard from "../../../components/ProductCard/ProductCard";
 
 const { width, height } = Dimensions.get("window");
 
@@ -129,18 +131,14 @@ const DispensaryScreen = () => {
             </TouchableOpacity>
           </View>
           <View>
-            {/* <FlashList
-      data={dispensaries}
-      horizontal
-      initialNumToRender={3}
-      // keyExtractor={(item) => item.id.toString()}
-      estimatedItemSize={5}
-      renderItem={({ item }) => (
-        <View>
-          <Text>Suuup</Text>
-        </View>
-      )}
-    /> */}
+            <FlashList
+              data={exampleProducts}
+              horizontal
+              initialNumToRender={5}
+              // keyExtractor={(item) => item.id.toString()}
+              estimatedItemSize={5}
+              renderItem={({ item }) => <ProductCard product={item} />}
+            />
           </View>
         </View>
       </View>

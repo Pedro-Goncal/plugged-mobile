@@ -8,13 +8,12 @@ import { useNavigation } from "@react-navigation/native";
 const StrainsCard = () => {
   const navigation = useNavigation();
 
-  const navi = () => {
-    navigation.navigate("StrainsScreen");
-    console.log("Yo, what up?!?");
-  };
   return (
     <View className="pt-5">
-      <TouchableOpacity className="flex flew-row items-center" onPress={navi}>
+      <TouchableOpacity
+        className="flex flew-row items-center"
+        onPress={() => navigation.navigate("StrainsScreen")}
+      >
         <Image
           source={require("../assets/backgrounds/highlightStrain.png")}
           className="rounded-lg"

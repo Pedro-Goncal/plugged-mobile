@@ -27,7 +27,7 @@ const HomeScreen = () => {
   // TODO - MIKE - Se note on Dispensery card
 
   return (
-    <SafeAreaView style={tw`flex-1 flex bg-black`}>
+    <SafeAreaView style={tw`flex-1 flex bg-black pt-10`}>
       <ScrollView className="bg-black">
         <View style={tw`bg-black`}>
           <Text style={tw`text-white text-2xl pt-3 font-bold pl-6`}>
@@ -39,7 +39,7 @@ const HomeScreen = () => {
           <FilterOptionsCard />
 
           <ScrollView className="pt-8 pl-6" horizontal>
-            {/* We should have the flash list here and the dispensery card be each own card indevidual */}
+            {/* We should have the flash list here and the dispensery card be each own card indevidual, and pass the info through props, same with the strains and educational cards */}
             <DispensaryCard />
           </ScrollView>
         </View>

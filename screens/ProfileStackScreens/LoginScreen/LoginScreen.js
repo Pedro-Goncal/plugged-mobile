@@ -41,7 +41,7 @@ const lightGreen2 = "#8acfbf";
 
 const { width, height } = Dimensions.get("window");
 
-//TODO - (PEDRO) - Finish refactoring styles back to StylesSheet 
+//TODO - (PEDRO) - Finish refactoring styles back to StylesSheet
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -125,66 +125,53 @@ const LoginScreen = () => {
   };
 
   return (
-    <SafeAreaView
-     
-      style={styles.container}
-    >
+    <Animated.View style={styles.container}>
       <Animated.View style={[StyleSheet.absoluteFill, imageAnimatedStyle]}>
         <Svg height={height} width={width}>
-          <View className="w-full flex justify-center items-center mt-5">
-            <ClipPath id="clipPathId">
-              <Ellipse cx={width / 2} rx={height} ry={height} />
-            </ClipPath>
-            <Image
-              source={Logo}
-              style={{ width: 200, height: 200 }}
-              className="w-full text-center"
-            />
+          {/* <ClipPath id="clipPathId">
+            <Ellipse cx={width / 2} rx={height} ry={height} />
+          </ClipPath> */}
+          <View style={styles.logoContainer}>
+            <Image source={Logo} style={styles.logo} />
           </View>
           <ImageSvg
+            style={{ opacity: 90 }}
             href={loginBg}
             width={width + 100}
             height={height + 100}
             preserveAspectRatio="xMidYMid slice"
-            className="opacity-80"
-            clipPath="url(#clipPathId)"
+            // clipPath="url(#clipPathId)"
           />
         </Svg>
         <Animated.View
-          className="h-8 w-8 justify-center self-center items-center rounded-full flex  "
-          style={[
-            { backgroundColor: lightGreen, top: -15 },
-            closeButtonAnimatedStyle,
-          ]}
+          style={[styles.closeButtonContainer, closeButtonAnimatedStyle]}
         >
           <Icon name="times" size={18} color={"white"} onPress={closeHandler} />
         </Animated.View>
       </Animated.View>
-      <View className="flex justify-center" style={styles.bottomContainer}>
-        <Animated.View
-          className="px-6 mb-6 font-bold"
-          style={sloganAnimatedStyle}
-        >
-          <Text className="text-white text-3xl">
+      <View style={styles.bottomContainer}>
+        {/* Slogan */}
+        <Animated.View style={[sloganAnimatedStyle, styles.sloganContainer]}>
+          <Text style={styles.sloganText}>
             Get plugged into dispensaries near you!
           </Text>
         </Animated.View>
-        <Animated.View style={buttonsAnimatedStyle}>
+        {/* Login Button */}
+        <Animated.View style={[buttonsAnimatedStyle, styles.btnContainer]}>
           <Pressable
-            className="mx-6 my-2 py-4 rounded-lg flex justify-center items-center"
-            style={{ backgroundColor: green }}
+            style={[styles.mainBtn, styles.loginBtn]}
             onPress={loginHandler}
           >
-            <Text className="text-white text-lg">Login</Text>
+            <Text style={styles.btnText}>Login</Text>
           </Pressable>
         </Animated.View>
+        {/* Register Button */}
         <Animated.View style={buttonsAnimatedStyle}>
           <Pressable
-            className="mx-6 my-2 py-4 rounded-lg flex justify-center items-center bg-black"
-            style={{ borderColor: green, borderWidth: 1 }}
+            style={[styles.mainBtn, styles.registerBtn]}
             onPress={registerHandler}
           >
-            <Text className="text-white text-lg">Sign up</Text>
+            <Text style={styles.btnText}>Sign up</Text>
           </Pressable>
         </Animated.View>
 
@@ -192,7 +179,7 @@ const LoginScreen = () => {
 
         <Animated.View style={[formAnimatedStyle, styles.formContainer]}>
           <View>
-            <Text className="text-4xl font-bold mb-4">
+            <Text className="text-3xl font-bold mb-4 text-white">
               {isRegistering ? "Sign Up" : "Login"}
             </Text>
           </View>
@@ -269,10 +256,8 @@ const LoginScreen = () => {
           </View>
         </Animated.View>
       </View>
-    </SafeAreaView>
+    </Animated.View>
   );
 };
 
 export default LoginScreen;
-
-

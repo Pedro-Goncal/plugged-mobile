@@ -20,6 +20,7 @@ import { useNavigation } from "@react-navigation/native";
 //Redux
 import { useDispatch } from "react-redux";
 import { selectDispensery } from "../redux/slices/dispenseriesSlice";
+import StarRatings from "./StarRatings/StarRatings";
 
 const Item = ({ name }) => (
   <View className="">
@@ -86,13 +87,8 @@ const DispensaryCard = ({
                 </Text>
               </View>
               <View style={tw`flex-row items-center pl-1 pt-1`}>
-                <Text style={tw`text-green-500 text-xs pl-1`}>4</Text>
                 <View className="pl-1 flex flex-row">
-                  <StarIcon className="" color="#DC8758" size={16} />
-                  <StarIcon className="" color="#DC8758" size={16} />
-                  <StarIcon className="" color="#DC8758" size={16} />
-                  <StarIcon className="" color="#DC8758" size={16} />
-                  <StarIcon className="" color="white" size={16} />
+                  <StarRatings rating={item.rating} />
                 </View>
               </View>
             </View>
