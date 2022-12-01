@@ -14,6 +14,7 @@ import CannabisLearningVideosCard from "../../../components/CannabisLearningVide
 import CannibasLearningCard from "../../../components/CannibasLearningCard";
 import DeliveryNearbyCard from "../../../components/DeliveryNearbyCard";
 import DispensaryCard from "../../../components/DispensaryCard";
+import DispensaryCarousel from "../../../components/DispensaryCarousel/DispensaryCarousel";
 import FilterOptionsCard from "../../../components/FilterOptionsCard";
 import HighlightsCard from "../../../components/HighlightsCard";
 import LocalNewsEventsCard from "../../../components/LocalNewsEventsCard";
@@ -40,7 +41,9 @@ const HomeScreen = () => {
 
           <ScrollView className="pt-8 pl-6" horizontal>
             {/* We should have the flash list here and the dispensery card be each own card indevidual, and pass the info through props, same with the strains and educational cards */}
-            <DispensaryCard />
+            {/* Create file called Dispesary carousel that holds a flashlist */}
+            {/* Inside the dispensary carousel flashlist on teh render item use the dispensary card file, and pass prop dispensary */}
+            <DispensaryCarousel />
           </ScrollView>
         </View>
 
