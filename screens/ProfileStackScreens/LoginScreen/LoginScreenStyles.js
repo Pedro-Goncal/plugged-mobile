@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.green,
     justifyContent: "flex-end",
+    minHeight: Math.round(height),
   },
   logoContainer: {
     display: "flex",
