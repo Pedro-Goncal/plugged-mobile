@@ -2,7 +2,7 @@
   "expo": {
     "name": "pluggedAZ",
     "slug": "pluggedaz",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -14,12 +14,11 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.plugged.pluggedaz"
+      "bundleIdentifier": "com.plugged.pluggedaz",
+      "buildNumber": "3"
     },
     "android": {
       "adaptiveIcon": {
