@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "plugged",
-    "slug": "plugged",
+    "name": "pluggedAZ",
+    "slug": "pluggedaz",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#130e10"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,16 +18,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.plugged.pluggedaz"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#130e10"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a8d4a6a5-fbed-412f-bacf-e89b8f5b68d1"
+      }
     }
   }
 }

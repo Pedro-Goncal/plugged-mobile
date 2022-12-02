@@ -7,6 +7,8 @@ import { HeartIcon, StarIcon } from "react-native-heroicons/solid";
 // Components
 import SimilarStrains from "../../SimilarStrains";
 
+// Strains screen show multiple carousels, strain of the month , sativa, indica etc..
+
 const StrainsScreen = () => {
   return (
     <View className="flex-1 flex bg-black">
