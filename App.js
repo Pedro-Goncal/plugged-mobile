@@ -15,7 +15,13 @@ import store from "./redux/store";
 
 import Routes from "./routes/Routes";
 
-export default function App() {
+//AWS
+import Amplify from "@aws-amplify/core";
+import config from "./src/aws-exports";
+
+Amplify.configure(config);
+
+const App = () => {
   return (
     <TailwindProvider>
       <Provider store={store}>
@@ -23,4 +29,6 @@ export default function App() {
       </Provider>
     </TailwindProvider>
   );
-}
+};
+
+export default App;

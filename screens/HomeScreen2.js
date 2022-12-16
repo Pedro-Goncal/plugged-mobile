@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import tw from "tailwind-react-native-classnames";
 import CannabisLearningVideosCard from "../components/CannabisLearningVideosCard";
 import CannibasLearningCard from "../components/CannibasLearningCard";
 import DeliveryNearbyCard from "../components/DeliveryNearbyCard";
@@ -22,13 +21,13 @@ import StrainsCard from "../components/StrainsCard";
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={tw`flex-1 flex bg-black`}>
+    <SafeAreaView className="flex-1 flex bg-black">
       <ScrollView className="bg-black">
-        <View style={tw`bg-black`}>
-          <Text style={tw`text-white text-2xl pt-3 font-bold pl-6`}>
+        <View className="bg-black">
+          <Text className="text-white text-2xl pt-3 font-bold pl-6">
             Dispensaries
           </Text>
-          <Text style={tw`text-white text-base pt-5 font-bold pl-6`}>
+          <Text className="text-white text-base pt-5 font-bold pl-6">
             Search By
           </Text>
           <FilterOptionsCard />
@@ -91,8 +90,8 @@ const HomeScreen = () => {
           </ScrollView>
         </View>
 
-        <View style={tw`bg-black`}>
-          <Text style={tw`text-white text-2xl pt-10 font-bold pl-5`}>
+        <View className="bg-black">
+          <Text className="text-white text-2xl pt-10 font-bold pl-5">
             Strain of the Month
           </Text>
           <View>
@@ -100,8 +99,8 @@ const HomeScreen = () => {
           </View>
         </View>
 
-        <View style={tw`bg-black`}>
-          <Text style={tw`text-white text-2xl pt-10 font-bold pl-5`}>
+        <View className="bg-black">
+          <Text className="text-white text-2xl pt-10 font-bold pl-5">
             Cannabis Learning
           </Text>
           <ScrollView
@@ -113,8 +112,8 @@ const HomeScreen = () => {
             <CannibasLearningCard />
           </ScrollView>
         </View>
-        <View style={tw`bg-black pr-24`}>
-          <Text style={tw`text-white text-2xl pt-10 font-bold pl-5 `}>
+        <View className="bg-black pr-24">
+          <Text className="text-white text-2xl pt-10 font-bold pl-5 ">
             Highlights - News & Events
           </Text>
           <ScrollView className=" pt-6 pl-6 ">

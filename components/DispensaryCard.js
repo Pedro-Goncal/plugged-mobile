@@ -9,8 +9,7 @@ import {
 import React from "react";
 import { FlashList } from "@shopify/flash-list";
 import { dispensaries } from "../utils/utilObjects";
-// Tailwind
-import tw from "tailwind-react-native-classnames";
+
 // Icons
 import { StarIcon } from "react-native-heroicons/solid";
 import { HeartIcon } from "react-native-heroicons/solid";
@@ -27,7 +26,7 @@ const DispensaryCard = ({ dispensary }) => {
   const dispatch = useDispatch();
 
   return (
-    <View style={tw`px-3`}>
+    <View className="px-3">
       <TouchableOpacity
         className="mx-3"
         onPress={() => {
@@ -47,14 +46,14 @@ const DispensaryCard = ({ dispensary }) => {
         </View>
         <View className="absolute mt-52 ml-2 mr-1 rounded-lg border-2 border-white pb-4 bg-black">
           <View className="flex flex-row items-center pt-2 pr-2">
-            <Text style={tw`text-green-500 font-bold text-lg pl-2 pr-2`}>
+            <Text className="text-green-500 font-bold text-lg pl-2 pr-2">
               {dispensary.name}
             </Text>
             <Text className="">
               <HeartIcon className="" color="white" size={22} />
             </Text>
           </View>
-          <Text style={tw`text-xs text-white pl-2 pr-2`}>
+          <Text className="text-xs text-white pl-2 pr-2">
             Address - {dispensary.address}
           </Text>
           <Text className="text-white text-xs pl-2">
@@ -66,7 +65,7 @@ const DispensaryCard = ({ dispensary }) => {
               Opens {dispensary.hours}, {dispensary.days}
             </Text>
           </View>
-          <View style={tw`flex-row items-center pl-1 pt-1`}>
+          <View className="flex-row items-center pl-1 pt-1">
             <View className="pl-1 flex flex-row">
               <StarRatings rating={dispensary.rating} />
             </View>

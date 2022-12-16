@@ -34,6 +34,7 @@ import FacebookButton from "../../../components/SocialMediaButtons/FacebookButto
 //Assets
 import Logo from "../../../assets/logo-no-background.png";
 import loginBg from "../../../assets/backgrounds/login-bg.png";
+import { confirmSignUp, signUp } from "../../../api/auth/auth";
 
 const green = "#169F80";
 const lightGreen = "#008489";
@@ -234,6 +235,9 @@ const LoginScreen = () => {
           <TouchableOpacity
             className=" mt-4 py-4 rounded-xl flex justify-center items-center"
             style={[{ backgroundColor: "black" }]}
+            onPress={() =>
+              signUp("bpg.pedro@gmail.com", "Pedro Goncalves", "Plugged123")
+            }
           >
             <Text className="text-lg" style={{ color: green }}>
               {isRegistering ? "Continue" : "Login"}
@@ -248,6 +252,7 @@ const LoginScreen = () => {
             <GoogleButton
               buttonViewStyle={{ width: 140 }}
               buttonText="Google"
+              onPress={() => confirmSignUp("bpg.pedro@gmail.com", "489622")}
             />
             <FacebookButton
               buttonViewStyle={{ borderColor: "#485a96", width: 145 }}
